@@ -1,6 +1,6 @@
 # raydee99
 
-[![Deploy static content to Pages](https://github.com/codeaquil/raydee99.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/codeaquil/raydee99.github.io/actions/workflows/deploy.yml)
+[![Deploy static content to Pages](https://github.com/codeaquil/raydee99.github.io/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/codeaquil/raydee99.github.io/actions/workflows/deploy.yml)
 
 A personal website for Ray.
 
