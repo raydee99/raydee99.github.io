@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "esbuild source/javascripts/site.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --watch",
+    "build": "esbuild source/javascripts/site.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --minify",
+    "server": "bundle exec middleman public && serve -d public"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "serve": "^14.2.4"
+  }
+}
