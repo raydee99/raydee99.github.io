@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "esbuild source/javascripts/site.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --watch",
-    "build": "esbuild source/javascripts/site.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --minify",
+    "start": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --watch",
+    "build": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --minify",
     "server": "bundle exec middleman public && serve -d public"
   },
   "dependencies": {

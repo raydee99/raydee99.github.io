@@ -17,19 +17,12 @@
             "url": "https://www.raydee99.com"
         }
     </script>
-    <%= stylesheet_link_tag 'bootstrap.min.css' %>
-    <%= stylesheet_link_tag 'Lato.css' %>
-    <%= stylesheet_link_tag 'Navbar-Right-Links-icons.css' %>
-    <%= stylesheet_link_tag 'Projects-Grid-images.css' %>
-    <%= stylesheet_link_tag 'styles.css' %>
-    <!-- TODO delete >
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Lato.css">
     <link rel="stylesheet" href="assets/css/swiper-icons.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-icons.css">
     <link rel="stylesheet" href="assets/css/Projects-Grid-images.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    -->
 </head>
 
 <body>
@@ -49,12 +42,12 @@
                 </ul><a class="btn btn-primary ms-md-2" role="button" href="#">Contact</a>
             </div>
         </div>
-    </nav>
-    <!-- End: Navbar Right Links -->
-    <!-- Start: Main -->
-    <%= yield %>
-    <!-- End: Main -->
-    <!-- Start: Footer Basic -->
+    </nav><!-- End: Navbar Right Links -->
+    <div class="card">
+        <div class="card-body text-center">
+            <h4 class="card-title">Meet Ray "Raydee99" Demers</h4><iframe allowfullscreen="" frameborder="0" width="1000rem" height="600rem" src="https://www.youtube.com/embed/FE7qgPofq6Q?si=DKDkbkDpacBYi4_O" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        </div>
+    </div><!-- Start: Footer Basic -->
     <footer class="text-center">
         <div class="container text-muted py-4 py-lg-5">
             <ul class="list-inline fs-2">
@@ -82,13 +75,9 @@
             <p>
                 <!--TODO dynamically set year-->&nbsp;© 2025 Ray Demers
             </p>
-            <p>
-                v2024.12.10.1
-            </p>
         </div>
-    </footer>
-    <!-- End: Footer Basic -->
-    <!-- TODO delete <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
-    <%= javascript_include_tag 'bundle' %>
+    </footer><!-- End: Footer Basic -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
