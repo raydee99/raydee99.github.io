@@ -46,7 +46,7 @@ jobs:
         run: bundle exec middleman build --http-prefix=/
         if: ${{ github.owner == "raydee99" }}
       - name: Build for Anyone
-        run: bundle exec middleman build --http-prefix=${GITHUB_REPOSITORY#*/}
+        run: bundle exec middleman build --http-prefix=/${GITHUB_REPOSITORY#*/}/
         if: ${{ github.owner != "raydee99 }}
       - name: Clean
         run: rm -f ${GITHUB_WORKSPACE}/public/.keep
