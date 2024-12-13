@@ -42,8 +42,12 @@ jobs:
           node-version: 20
       - name: Install Javascript Dependencies
         run: npm ci --dev
-      - name: Build
-        run: bundle exec middleman build --http-prefix=/raydee99.github.io/
+      - name: Build for Ray
+        run: bundle exec middleman build --http-prefix=/
+        if: ${{ github.owner == "raydee99" }}
+      - name: Build for Anyone
+        run: bundle exec middleman build --http-prefix=${GITHUB_REPOSITORY#*/}
+        if: ${{ github.owner != "raydee99 }}
       - name: Clean
         run: rm -f ${GITHUB_WORKSPACE}/public/.keep
       - name: Setup Pages
