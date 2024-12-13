@@ -194,3 +194,7 @@ build-iPhoneSimulator/
 .sass-cache
 
 ## App
+public/
+!public/.keep
+# tmp ignored above under Ruby
+!tmp/.keep
