@@ -44,7 +44,7 @@ jobs:
       - name: Install Javascript Dependencies
         run: npm ci --dev
       - name: Build
-        run: bundle exec middleman build
+        run: bundle exec middleman build --relative-links
       - name: Clean
         run: rm public/.keep
       - name: Setup Pages
