@@ -26,6 +26,9 @@
 </head>
 
 <body>
+  <noscript>
+    <div class="alert alert-warning text-center text-dark"><b>Warning:</b> Javascript is disabled so site functionality is limited. Please enable Javascript.</div>
+  </noscript>
   <div class="alert alert-warning text-center text-dark"><b>Warning:</b> This website is under development.</div><%# TODO refactor into config %>
   <!-- Start: Navbar Right Links -->
   <nav class="navbar navbar-expand-md bg-body py-3">
@@ -87,15 +90,13 @@
           </svg>
         </li>
         <li class="list-inline-item">
-          <span style="font-size:0.9em;">
-            BC <!--TODO import bandcamp icon-->
-          </span>
+          <img src="<%= image_path 'bandcamp_icon.png' %>" width="1em" height="1em" alt="Bandcamp" />
         </li>
       </ul>
       <ul class="list-inline text-center pe-0">
-        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="#">Contact</a></li>
-        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="#">Terms and Conditions<span style="color: rgba(204, 154, 6, 0);">&nbsp;</span></a></li>
-        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="#">Privacy Policy</a></li>
+        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="contact.html">Contact</a></li>
+        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="terms.html">Terms and Conditions</a></li>
+        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="privacy.html">Privacy Policy</a></li>
       </ul>
       <p>
         © <span id="year">2025</span> Ray Demers
