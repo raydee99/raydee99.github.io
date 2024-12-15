@@ -42,6 +42,8 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+set :port, 3000
+
 # Create website in public/ folder
 set :build_dir, 'public'
 

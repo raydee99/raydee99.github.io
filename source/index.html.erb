@@ -1,6 +1,7 @@
 <%# index.html.erb %>
 <main>
-  <div class="card">
+  <!-- Start: Desktop view -->
+  <div class="card d-none d-lg-block">
     <div class="card-body text-center">
       <h4 class="card-title">Meet Ray "Raydee99" Demers</h4>
       <iframe allowfullscreen=""
@@ -12,4 +13,17 @@
       </iframe>
     </div>
   </div>
+  <!-- End: Desktop view -->
+  <!-- Start: Mobile view -->
+  <div class="d-block d-lg-none">
+    <section class="py-5" style="background-image: url('<%= image_path %q(sound_mixing.png) %>'); background-size: cover; background-repeat: no-repeat;">
+      <div class="text-center py-5">
+        <h4 class="py-4">Meet Ray "Raydee99" Demers</h4>
+        <button class="btn btn-primary py-4">YouTube Trailer</button>
+      </div>
+    </section>
+    <%= partial "shared/about" %>
+    <%= partial "shared/contact" %>
+  </div>
+  <!-- End: Mobile view -->
 </main>
