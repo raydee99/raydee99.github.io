@@ -27,9 +27,9 @@
 
 <body>
   <noscript>
-    <div class="alert alert-warning text-center text-dark"><b>Warning:</b> Javascript is disabled so site functionality is limited. Please enable Javascript.</div>
+    <%= partial 'shared/alert', locals: {type: 'danger',label: 'Warning',  message: 'Javascript is disabled so site functionality is limited. Please enable Javascript.'} %>
   </noscript>
-  <div class="alert alert-warning text-center text-dark"><b>Warning:</b> This website is under development.</div><%# TODO refactor into config %>
+  <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
   <!-- Start: Navbar Right Links -->
   <nav class="navbar navbar-expand-md bg-body py-3">
     <div class="container">
