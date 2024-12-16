@@ -1,0 +1,23 @@
+# podcasts.yml
+#
+# This file stores content for raydee99.com/podcasts webpage
+# in YAML format: yaml.org (TODO: find good yaml link)
+#
+# Lines starting with '#' are comments and are NOT part of the data.
+#
+# You can add a new podcasts to the webpage by adding an entry like
+# the example below:
+#
+# - title: "My Podcast"
+#   image: "my_image.png"
+#   description: |
+#     My description for the podcast. This description
+#     can be multiline but must be indented. Note
+#     the dash '-' is only before title. Everything
+#     is case and whitespace sensitive.
+#
+
+- title: "A Podcast"
+  image: "placeholder.png"
+  description: |
+    TODO fill out actual podcasts. Check design.

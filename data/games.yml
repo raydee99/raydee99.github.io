@@ -1,0 +1,23 @@
+# games.yml
+#
+# This file stores content for raydee99.com/games webpage
+# in YAML format: yaml.org (TODO: find good yaml link)
+#
+# Lines starting with '#' are comments and are NOT part of the data.
+#
+# You can add a new game to the webpage by adding an like the
+# example below:
+#
+# - title: "My Game"
+#   image: "my_image.png"
+#   description: |
+#     My description for the game. This description
+#     can be multiline but must be indented. Note
+#     the dash '-' is only before title. Everything
+#     is case and whitespace sensitive.
+#   
+
+- title: "Hello World"
+  image: "placeholder.png"
+  description: |
+    TODO fill out actual games and test
