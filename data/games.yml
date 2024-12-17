@@ -1,7 +1,7 @@
 # games.yml
 #
 # This file stores content for raydee99.com/games webpage
-# in YAML format: yaml.org (TODO: find good yaml link)
+# in YAML format: https://yaml.org
 #
 # Lines starting with '#' are comments and are NOT part of the data.
 #
@@ -15,7 +15,7 @@
 #     can be multiline but must be indented. Note
 #     the dash '-' is only before title. Everything
 #     is case and whitespace sensitive.
-#   
+#
 
 - title: "Hello World"
   image: "placeholder.png"

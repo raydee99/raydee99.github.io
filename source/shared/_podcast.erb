@@ -1,10 +1,12 @@
 <%# _podcast.erb %>
-<%# TODO params %>
+<%# @param title [String] %>
+<%# @param spotify_embed_url [String] %>
+<%# @param description [String] %>
 
 <div class="col">
   <div class="d-flex flex-column flex-lg-row">
-    <div class="w-100">
-      <img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="<%= image_path(image) %>" alt="An image named <%= image %> for the podcast <%= title %>.">
+    <div class="">
+      <iframe style="height: 200px" src="<%= spotify_embed_url %>" title="Play <%= title %> on Spotify"></iframe>
     </div>
     <div class="py-4 py-lg-0 px-lg-4">
       <h4><%= title %></h4>
