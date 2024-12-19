@@ -25,3 +25,11 @@
   image: "new_year_new_beat.png"
   description: |
     Composer, Beat-Mapper, & Lead Game Designer
+- title: "Dash & Cast"
+  image: "dash_and_cast.png"
+  description: |
+    Composer, Level Designer, & Lead Game Designer
+- title: "Pillow Tetris"
+  image: "pillow_tetris.png"
+  description: |
+    Composer & Lead Game Designer
