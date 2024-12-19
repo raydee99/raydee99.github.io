@@ -33,3 +33,40 @@
   image: "pillow_tetris.png"
   description: |
     Composer & Lead Game Designer
+- title: "The Adventures of Soap Boy"
+  image: "adventures_of_soap_boy.png"
+  description: |
+    Composer
+- title: "Queen of Swords"
+  image: "queen_of_swords.png"
+  description: |
+    Composer, Game Designer, & Producer
+- title: "Dough Mentum"
+  image: "doughmentum.png"
+  description: |
+    Composer
+- title: "Three's a Crowd"
+  image: "threes_a_crowd.png"
+  description: |
+    Lead Game Designer & Level Designer
+- title: "Wander"
+  image: "wander.png"
+  description: |
+    Composer & Sound Designer
+- title: "Blooming Hearts"
+  image: "blooming_hearts.png"
+  description: |
+    Composer, Producer, Sound Designer, & Voice Actor
+- title: "Entropy"
+  image: "entropy.png"
+  description: |
+    Level Designer & Narrative Designer
+- title: ""
+  image: ""
+  description: |
+    ...
+- title: ""
+  image: ""
+  description: |
+    ...
+
