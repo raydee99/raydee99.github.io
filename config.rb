@@ -46,7 +46,7 @@ set :port, 3000
 # Create website in public/ folder
 set :build_dir, 'public'
 
-VERSION = '2024.12.18.1'.freeze
+VERSION = '2024.12.18.2'.freeze
 
 ## Development Environment
 configure :development do
