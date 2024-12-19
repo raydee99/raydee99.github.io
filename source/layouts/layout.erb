@@ -105,9 +105,11 @@
       <p>
         © <span id="year">2025</span> Ray Demers
       </p>
+      <% if config[:version] %>
       <p>
-        v2024.12.15.0 <%# TODO refactor into config %>
+        v<%= config[:version] %>
       </p>
+      <% end %>
     </div>
   </footer>
   <!-- End: Footer Basic -->

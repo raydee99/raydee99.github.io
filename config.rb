@@ -41,14 +41,17 @@ page '/*.txt', layout: false
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
 set :port, 3000
 
 # Create website in public/ folder
 set :build_dir, 'public'
 
+VERSION = '2024.12.18.0'.freeze
+
 ## Development Environment
 configure :development do
+
+  config[:version] = VERSION + '-dev'
 
   Bundler.require(:default, :development)
 
@@ -70,6 +73,8 @@ end
 
 ## Build (Production) Environment
 configure :build do
+
+  config[:version] = VERSION
 
   activate :minify_css
 
