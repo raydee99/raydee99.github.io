@@ -53,6 +53,12 @@ configure :development do
   Bundler.require(:default, :development)
 
   activate :external_pipeline,
+    name: 'data-images',
+    command: 'cp -r data/images source/images/data',
+    source: 'source/images/data',
+    latency: 1
+
+  activate :external_pipeline,
     name: 'esbuild',
     command: 'npm run start',
     source: 'tmp/esbuild/',
@@ -66,6 +72,12 @@ end
 configure :build do
 
   activate :minify_css
+
+  activate :external_pipeline,
+    name: 'data-images',
+    command: 'cp -r data/images source/images/data',
+    source: 'source/images/data',
+    latency: 1
 
   activate :external_pipeline,
     name: 'esbuild',

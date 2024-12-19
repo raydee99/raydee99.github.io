@@ -21,6 +21,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NO_CONTRACTS: true # Speed up build
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
