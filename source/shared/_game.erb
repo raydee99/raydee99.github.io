@@ -1,11 +1,14 @@
 <%# _game.erb %>
 <%# @param title [String] %>
 <%# @param image [String] - base file name %>
+<%# @param url [String] - link to game %>
 <%# @param description [String] %>
 
 <div class="col">
   <div>
-    <img class="rounded img-fluid d-block w-100 fit-contain" style="height: 200px;" src="<%= image_path(image) %>" alt="An image named <%= image %> for the game <%= title %>.">
+    <a href="<%= url %>" rel="external" target="_blank" title="Play <%= title %>">
+      <img class="rounded img-fluid d-block w-100 fit-contain" style="height: 200px;" src="<%= image_path(image) %>" alt="An image named <%= image %> for the game <%= title %>.">
+    </a>
     <div class="py-4">
       <h4><%= title %></h4>
       <p><%= description %></p>

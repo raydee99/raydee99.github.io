@@ -61,12 +61,29 @@
   image: "entropy.png"
   description: |
     Level Designer & Narrative Designer
-- title: ""
-  image: ""
+- title: "Spring Cleaning"
+  image: "spring_cleaning.jpg"
   description: |
-    ...
-- title: ""
-  image: ""
+    Composer
+- title: "Tiny Kaiju Terrarium"
+  image: "tiny_kaiju_terrarium.png"
   description: |
-    ...
+    "Composer, Producer, & Sound Designer"
+- title: "Hearts of Hallow's Eve"
+  image: "hearts_of_hallows_eve.png"
+  description: |
+    Composer, Producer, Writer, & Sound Designer
+- title: "Fluttering Friends"
+  image: "fluttering_friends.png"
+  description: |
+    Composer, Producer, & Additional Writing
+- title: "K-RAT-E TTRPG"
+  image: "ka_rat_e.png"
+  description: |
+    Sole Game Designer
+- title: "Mission Opossumble TTRPG"
+  image: "mission_opossumble.png"
+  description: |
+    Sole Game Designer
+
 
