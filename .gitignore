@@ -192,6 +192,7 @@ build-iPhoneSimulator/
 .cache
 .DS_Store
 .sass-cache
+*.swp
 
 ## App
 public/
