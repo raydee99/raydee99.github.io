@@ -2,6 +2,25 @@
   width: 50vw;
 }
 
+.mobile-icon-flex {
+
+  width: 28px;
+  height: 28px;
+
+  // Default size for Medium devices (tablets)
+  @media (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  // Default size for Large devices (desktops)
+  @media (min-width: 992px) {
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
 a.nav-link, a.navbar-brand {
   color: var(--bs-gray-300) !important;
   text-align: center !important;
@@ -13,6 +32,10 @@ a.nav-link:hover, a.navbar-brand:hover, a.nav-btn:hover {
 
 a {
   text-shadow: none !important;
+}
+
+footer a {
+  color: var(--bs-yellow)!important;
 }
 
 .text-muted {
