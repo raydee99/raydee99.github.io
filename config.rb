@@ -56,6 +56,7 @@ set :build_dir, 'public'
 ## Development Environment
 configure :development do
 
+  config[:development_banner] = true
   config[:version] = version + '-dev'
 
   Bundler.require(:default, :development)
@@ -79,6 +80,7 @@ end
 ## Build (Production) Environment
 configure :build do
 
+  config[:development_banner] = false
   config[:version] = version
 
   activate :minify_css

@@ -35,7 +35,9 @@
   <noscript>
     <%= partial 'shared/alert', locals: {type: 'danger',label: 'Warning',  message: 'Javascript is disabled so site functionality is limited. Please enable Javascript.'} %>
   </noscript>
-  <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
+  <% if config[:development_banner] %>
+    <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
+  <% end %>
   <!-- Start: Navbar Right Links -->
   <nav class="navbar navbar-expand-md bg-body py-3">
     <div class="container">
