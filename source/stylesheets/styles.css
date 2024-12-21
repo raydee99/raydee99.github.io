@@ -1,3 +1,7 @@
+.mobile-btn {
+  width: 50vw;
+}
+
 a.nav-link, a.navbar-brand {
   color: var(--bs-gray-300) !important;
   text-align: center !important;

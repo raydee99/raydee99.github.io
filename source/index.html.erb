@@ -4,6 +4,7 @@
   <div class="card d-none d-lg-block">
     <div class="card-body text-center">
       <h4 class="card-title">Meet Ray "Raydee99" Demers</h4>
+      <p class="card-subtitle">A game designer and music composer</p>
       <iframe allowfullscreen=""
               frameborder="0"
               width="1000rem"
@@ -16,10 +17,13 @@
   <!-- End: Desktop view -->
   <!-- Start: Mobile view -->
   <div class="d-block d-lg-none">
-    <section class="py-5" style="background-image: url('<%= image_path %q(sound_mixing.png) %>'); background-size: cover; background-repeat: no-repeat;">
+    <section class="py-5" style="min-height:80vh; background-image: url('<%= image_path %q(sound_mixing.png) %>'); background-size: cover; background-repeat: no-repeat;">
       <div class="text-center py-5">
-        <h4 class="py-4">Meet Ray "Raydee99" Demers</h4>
-        <button class="btn btn-primary py-4">YouTube Trailer</button>
+        <h4 class="pt-4 pb-2">Meet Ray "Raydee99" Demers</h4>
+        <p class="py-2">A game designer and music composer</p>
+        <a class="mobile-btn btn btn-primary py-3 px-2 my-2" href="https://www.youtube.com/watch?v=FE7qgPofq6Q" role="button">YouTube Trailer</a>
+        <br />
+        <a class="mobile-btn btn btn-secondary py-3 px-2 my-4" href="#about" role="button">Learn More</a>
       </div>
     </section>
     <%= partial "shared/about" %>
