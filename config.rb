@@ -39,6 +39,13 @@ page '/*.txt', layout: false
 #   end
 # end
 
+# @return [String] calder version number
+def version()
+  Time.now.strftime("%Y.%m.%d") + '-' + `git log --format="%H" -n 1`[0...3]
+rescue
+  Time.now.strftime("%Y.%m.%d")
+end
+
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 set :port, 3000
@@ -46,12 +53,10 @@ set :port, 3000
 # Create website in public/ folder
 set :build_dir, 'public'
 
-VERSION = '2024.12.20.0'.freeze
-
 ## Development Environment
 configure :development do
 
-  config[:version] = VERSION + '-dev'
+  config[:version] = version + '-dev'
 
   Bundler.require(:default, :development)
 
@@ -74,7 +79,7 @@ end
 ## Build (Production) Environment
 configure :build do
 
-  config[:version] = VERSION
+  config[:version] = version
 
   activate :minify_css
 
