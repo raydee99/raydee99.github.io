@@ -199,3 +199,4 @@ public/
 !public/.keep
 # tmp ignored above under Ruby
 !tmp/.keep
+source/images/data/**/*
