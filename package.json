@@ -3,12 +3,17 @@
   "scripts": {
     "start": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --watch",
     "build": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --minify",
-    "server": "bundle exec middleman build && serve -d public"
+    "server": "bundle exec middleman build && serve -d public",
+    "test": "echo 'Your browsers and server must be closed!' && playwright test",
+    "test-report": "playwright show-report",
+    "test-ui": "playwright test --ui"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
     "esbuild": "0.24.0",
     "serve": "^14.2.4"
   }
