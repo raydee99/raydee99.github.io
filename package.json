@@ -4,7 +4,9 @@
     "start": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --watch",
     "build": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --minify",
     "server": "bundle exec middleman build && serve -d public",
-    "test": "playwright test"
+    "test": "playwright test",
+    "test-report": "playwright show-report",
+    "test-ui": "playwright test --ui"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

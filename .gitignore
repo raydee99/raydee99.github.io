@@ -200,6 +200,8 @@ public/
 # tmp ignored above under Ruby
 !tmp/.keep
 source/images/data/**/*
+
+# Playwright
 /test-results/
 /playwright-report/
 /blob-report/
