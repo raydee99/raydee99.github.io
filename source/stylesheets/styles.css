@@ -49,6 +49,18 @@ footer a {
   color: var(--bs-yellow)!important;
 }
 
+.background-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
 body {
   color: var(--bs-white);
 }
