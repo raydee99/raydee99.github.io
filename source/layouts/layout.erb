@@ -35,7 +35,7 @@
   <noscript>
     <%= partial 'shared/alert', locals: {type: 'danger',label: 'Warning',  message: 'Javascript is disabled so site functionality is limited. Please enable Javascript.'} %>
   </noscript>
-  <% if config[:development_banner] %>
+  <% if config[:development] %>
     <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
   <% end %>
   <!-- Start: Navbar Right Links -->
@@ -105,10 +105,10 @@
       <p>
         © <span id="year">2025</span> Ray Demers
       </p>
-      <% if config[:version] %>
-      <p>
-        v<%= config[:version] %>
-      </p>
+      <% if config[:development] %>
+      <p>v<%= config[:version] %></p>
+      <% else %>
+      <!-- v<%= config[:version] %> -->
       <% end %>
     </div>
   </footer>
