@@ -33,11 +33,22 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  # @param games [Array<EnhancedHash>]
+  # @param type [#to_s] ttrpg | video_game | other
+  def select_games(games, type)
+    case type.to_s
+    when 'ttrpg'
+      games.select { |g| g['type']&.casecmp? 'ttrpg' }
+    when 'video_game'
+      games.select { |g| g['type']&.casecmp? 'video_game' }
+    when 'other'
+      games.reject { |g| %w[ttrpg video_game].include? g['type']&.downcase }
+    else
+      raise StandardError, "Invalid type #{type} param when calling select_games helper"
+    end
+  end
+end
 
 # @return [String] calder version number
 def version()

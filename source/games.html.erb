@@ -3,14 +3,38 @@
   <div class="container py-4 py-xl-5">
     <div class="row mb-5">
       <div class="col-md-8 col-xl-6 text-center mx-auto">
-        <h2>Video Games &amp; Table-Top RPGs</h2>
-        <p class="w-lg-50">My collection of TTRPG projects and one shot web games.</p>
+        <h2>Table-Top RPGs</h2>
+        <p class="w-lg-50">
+          Developing one-shot TTRPG's has become a new interest for Raydee99.
+          These games can be downloaded and printed to play with friends right
+          off of itch.io! Click on the image below to be taken to the game's page.
+        </p>
       </div>
     </div>
     <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-      <% data['games'].reverse.each do |game| %>
+      <% select_games(data['games'], 'ttrpg').reverse.each do |game| %>
+        <%= partial 'shared/game', locals: game.to_hash %>
+      <% end %>
+    </div>
+    <div class="row mt-3 mt-lg-5 mb-2 mb-lg-4">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2>Video Games</h2>
+        <p class="w-lg-50">
+          A majority of these games feature Raydee99 as a composer, however,
+          alongside writing music, a handful of these also feature his abilities
+          as a voice actor, producer, systems designer, and sound designer.
+        </p>
+      </div>
+    </div>
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <% select_games(data['games'], 'video_game').reverse.each do |game| %>
         <%= partial 'shared/game', locals: game.to_hash %>
       <% end %>
     </div>
   </div>
 </main>
+
+<%# output warning for unrecognized game types %>
+<% if select_games(data['games'], 'other').any? %>
+<%   $stderr.puts "WARNING: Unrecognized game type(s) in data/games.yml: #{data['games'].map{|g| g['type']}.reject{|t| %w[ttrpg video_game].include?(t)}}" %>
+<% end %>
