@@ -3,22 +3,29 @@
 }
 
 .mobile-icon-flex {
-
   width: 28px;
   height: 28px;
-
-  // Default size for Medium devices (tablets)
-  @media (min-width: 768px) {
+}
+@media (min-width: 768px) {
+  .mobile-icon-flex {
     width: 30px;
     height: 30px;
   }
-
-  // Default size for Large devices (desktops)
-  @media (min-width: 992px) {
+}
+@media (min-width: 992px) {
+  .mobile-icon-flex {
     width: 34px;
     height: 34px;
   }
+}
 
+.mobile-iframe-flex {
+  height: 160px;
+}
+@media (min-width: 992px) {
+  .mobile-iframe-flex {
+    height: 400px;
+  }
 }
 
 a.nav-link, a.navbar-brand {

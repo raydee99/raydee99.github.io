@@ -4,11 +4,11 @@
 <%# @param description [String] %>
 
 <div class="col">
-  <div class="d-flex flex-column flex-lg-row">
-    <div class="">
-      <iframe style="height: 200px" src="<%= spotify_embed_url %>" title="Play <%= title %> on Spotify"></iframe>
+  <div class="d-flex flex-column flex-lg-row justify-content-center pb-5 pb-lg-0">
+    <div class="align-self-center">
+      <iframe class="mobile-iframe-flex" src="<%= spotify_embed_url %>" title="Play <%= title %> on Spotify"></iframe>
     </div>
-    <div class="py-4 py-lg-0 px-lg-4">
+    <div class="align-self-start px-lg-4 text-center text-lg-start">
       <h4><%= title %></h4>
       <p>
         <%= description %>
