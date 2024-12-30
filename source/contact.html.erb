@@ -6,3 +6,7 @@ layout: page
 <main>
   <%= partial "shared/contact" %>
 </main>
+
+<% content_for :footer do %>
+  <%= partial 'shared/footer', locals: {remove_icons: true} %>
+<% end %>

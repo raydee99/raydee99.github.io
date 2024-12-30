@@ -1,6 +1,11 @@
 <%# _footer.erb %>
+<%# @param remove_icons [Boolean] - remove icons if truthy %>
+
+<% remove_icons ||= false %>
+
 <footer class="text-center bg-dark bg-opacity-75 fade-in">
   <div class="container text-muted py-2">
+    <% unless remove_icons %>
     <ul class="list-inline fs-2">
       <li class="list-inline-item me-4">
         <a role="button" href="https://www.youtube.com/@raydee99">
@@ -20,6 +25,7 @@
         </a>
       </li>
     </ul>
+    <% end %>
     <ul class="list-inline text-center px-3">
       <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="contact.html">Contact</a></li>
       <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="terms.html">Terms and Conditions</a></li>
