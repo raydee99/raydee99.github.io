@@ -30,6 +30,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <% if content_for?(:layout_head) %>
+    <%= yield_content :layout_head %>
+  <% end %>
+
   <% if content_for?(:head) %>
     <%= yield_content :head %>
   <% end %>

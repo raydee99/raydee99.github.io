@@ -1,0 +1,18 @@
+<%# document.erb %>
+<%# layout for pages that only contain text, i.e: terms %>
+
+<% wrap_layout :page do %>
+<% content_for(:head) do %><%# Use up head hook because layout-head hook is used by page %>
+  <meta name="robots" content="noindex,follow" />
+<% end %>
+
+<main>
+  <div class="container">
+    <div class="row py-3 py-lg-4 py-xl-5">
+      <div class="col-md-12 p-2 bg-dark bg-opacity-75">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</main>
+<% end %>

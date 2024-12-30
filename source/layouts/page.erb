@@ -1,0 +1,10 @@
+<%# page.erb %>
+<%# standard layout for each page in this website, includes background image %>
+
+<% wrap_layout :layout do %>
+<% content_for(:layout_head) do %>
+  <%= stylesheet_link_tag 'background_image_animated.css' %>
+<% end %>
+
+<%= yield %>
+<% end %>

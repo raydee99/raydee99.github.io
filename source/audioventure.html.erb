@@ -1,7 +1,12 @@
 ---
 file: audioventure.html.erb
 title: "Audioventure!"
+layout: layout
 ---
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'background_image_audioventure.css' %>
+<% end %>
+
 <main>
   <div class="container py-4 py-xl-5">
     <div class="row mb-5">
