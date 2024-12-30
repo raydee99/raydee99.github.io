@@ -47,7 +47,7 @@ bundle exec middleman build
 ```
  5. Compile website and launch staging server:
 ```
-npm run server
+npm run preview
 ```
 
 ### Techstack and Documentation

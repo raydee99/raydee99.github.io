@@ -3,7 +3,8 @@
   "scripts": {
     "start": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --watch",
     "build": "esbuild source/javascripts/index.js --bundle --target=es6 --outfile=tmp/esbuild/javascripts/bundle.js --sourcemap --minify",
-    "server": "bundle exec middleman build && serve -d public",
+    "server": "serve -d public",
+    "preview": "bundle exec middleman build && serve -d public",
     "test": "echo 'Your browsers and server must be closed!' && playwright test",
     "test-report": "playwright show-report",
     "test-ui": "playwright test --ui"
