@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>raydee99.com | Video Game Music Composer</title>
+  <title>raydee99.com | <%= current_page.data.fetch('title', 'Video Game Music Composer') %></title>
 
   <link rel="canonical" href="https://www.raydee99.com/">
   <meta property="og:url" content="https://www.raydee99.com/">
@@ -29,90 +29,45 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <% if content_for?(:head) %>
+    <%= yield_content :head %>
+  <% end %>
 </head>
 
 <body>
   <noscript>
-    <%= partial 'shared/alert', locals: {type: 'danger',label: 'Warning',  message: 'Javascript is disabled so site functionality is limited. Please enable Javascript.'} %>
+    <%= partial 'shared/alert', locals: {type: 'danger', label: 'Warning',  message: 'Javascript is disabled so site functionality is limited. Please enable Javascript.'} %>
   </noscript>
   <% if config[:development] %>
-    <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
-  <% end %>
-  <!-- Start: Navbar Right Links -->
-  <nav class="navbar navbar-expand-md bg-dark bg-opacity-75 py-3 drop-in">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center bs-light-text-emphasis" href="index.html">
-        <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note" viewBox="0 0 16 16">
-            <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
-            <path fill-rule="evenodd" d="M9 3v10H8V3z"/>
-            <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5z"/>
-          </svg>
-        </span>
-        <span class="bs-light-text-emphasis">Raydee99</span>
-      </a>
-      <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
-        <span class="visually-hidden">Toggle navigation</span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navcol-2">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
-          <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
-          <li class="nav-item"><a class="nav-link" href="podcasts.html">Podcasts</a></li>
-          <li class="nav-item d-none d-md-inline"><a class="nav-link" href="about.html">About</a></li>
-          <!-- Mobile view links: -->
-          <li class="nav-item d-inline d-md-none"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item d-inline d-md-none"><a class="nav-link" href="https://the-audioventure.github.io/The-Audioventure">Audioventure!</a></li>
-          <li class="nav-item d-inline d-md-none"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <a class="nav-btn btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="https://the-audioventure.github.io/The-Audioventure">Audioventure!</a>
-        <a class="nav-btn btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
-      </div>
+    <div class="drop-in">
+      <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
     </div>
-  </nav>
-  <!-- End: Navbar Right Links -->
+  <% end %>
+
+  <!-- Start: Navbar -->
+  <% if content_for?(:nav) %>
+    <%= yield_content :nav %>
+  <% else %>
+    <%= partial 'shared/navbar' %>
+  <% end %>
+  <!-- End: Navbar -->
+
   <!-- Start: Main -->
   <%= yield %>
   <!-- End: Main -->
+
   <!-- Start: Footer Basic -->
-  <footer class="text-center bg-dark bg-opacity-75 fade-in">
-    <div class="container text-muted py-2">
-      <ul class="list-inline fs-2">
-        <li class="list-inline-item me-4">
-          <a role="button" href="https://www.youtube.com/@raydee99">
-          <svg class="bi bi-youtube" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-          </svg></a>
-        </li>
-        <li class="list-inline-item me-4">
-          <a role="button" href="https://open.spotify.com/artist/2TIgWEhWmOGUIAmfQ0VXcf">
-          <svg class="bi bi-spotify" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
-            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
-          </svg></a>
-        </li>
-        <li class="list-inline-item">
-          <a role="button" href="https://raydee99.bandcamp.com/">
-          <img class="mobile-icon-flex" src="<%= image_path 'bandcamp_icon_yellow.png' %>" alt="Bandcamp" />
-          </a>
-        </li>
-      </ul>
-      <ul class="list-inline text-center px-3">
-        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="contact.html">Contact</a></li>
-        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="terms.html">Terms and Conditions</a></li>
-        <li class="list-inline-item mx-5"><a class="link-secondary link-warning" href="privacy.html">Privacy</a></li>
-      </ul>
-      <p>
-        © <span id="year">2025</span> Ray Demers
-      </p>
-      <% if config[:development] %>
-      <p>v<%= config[:version] %></p>
-      <% else %>
-      <!-- v<%= config[:version] %> -->
-      <% end %>
-    </div>
-  </footer>
+  <% if content_for?(:footer) %>
+    <%= yield_content :footer %>
+  <% else %>
+    <%= partial 'shared/footer' %>
+  <% end %>
   <!-- End: Footer Basic -->
+
   <%= javascript_include_tag 'bundle' %>
+  <% if content_for?(:scripts) %>
+    <%= yield_content :scripts %>
+  <% end %>
 </body>
 </html>

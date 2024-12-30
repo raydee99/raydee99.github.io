@@ -1,0 +1,57 @@
+<%# _navbar.erb %>
+<nav class="navbar navbar-expand-md bg-dark bg-opacity-75 py-3 drop-in">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center bs-light-text-emphasis" href="index.html">
+      <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note" viewBox="0 0 16 16">
+          <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
+          <path fill-rule="evenodd" d="M9 3v10H8V3z"/>
+          <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5z"/>
+        </svg>
+      </span>
+      <span class="bs-light-text-emphasis">Raydee99</span>
+    </a>
+    <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
+      <span class="visually-hidden">Toggle navigation</span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navcol-2">
+      <ul class="navbar-nav ms-auto">
+
+        <% {'Games' => 'games.html', 'Music' => 'music.html', 'Podcasts' => 'podcasts.html'}.each do |name, page| %>
+          <% if page == current_page.data.fetch('file')&.delete_suffix('.erb') %>
+            <li class="nav-item"><%= link_to name, page, class: 'nav-link nav-link-active' %></li>
+          <% else %>
+            <li class="nav-item"><%= link_to name, page, class: 'nav-link' %></li>
+          <% end %>
+        <% end %>
+
+        <!-- Desktop view links: -->
+        <% if 'about.html.erb' == current_page.data.fetch('file') %>
+          <li class="nav-item d-none d-md-inline"><%= link_to 'About', 'about.html', class: 'nav-linkk nav-link-active' %></li>
+        <% else %>
+          <li class="nav-item d-none d-md-inline"><%= link_to 'About', 'about.html', class: 'nav-link' %></li>
+        <% end %>
+
+        <!-- Mobile view links: -->
+        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="audioventure.html">Audioventure!</a></li>
+        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Desktop view buttons: -->
+      <% if 'audioventure.html.erb' == current_page.data.fetch('file') %>
+        <a class="nav-btn btn btn-outline-warning text-warning ms-md-2 d-none d-md-inline-block" role="button" href="audioventure.html">Audioventure!</a>
+      <% else %>
+        <a class="nav-btn btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="audioventure.html">Audioventure!</a>
+      <% end %>
+
+      <% if 'contact.html.erb' == current_page.data.fetch('file') %>
+        <a class="nav-btn btn btn-outline-warning text-warning ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
+      <% else %>
+        <a class="nav-btn btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
+      <% end %>
+
+    </div>
+  </div>
+</nav>
