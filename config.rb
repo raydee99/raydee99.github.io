@@ -48,6 +48,11 @@ helpers do
       raise StandardError, "Invalid type #{type} param when calling select_games helper"
     end
   end
+
+  # @param font_file [String]
+  def font_path(font_file)
+    asset_path('fonts', font_file).delete_suffix('.fonts')
+  end
 end
 
 # @return [String] calder version number
