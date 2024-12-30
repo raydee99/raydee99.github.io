@@ -39,7 +39,7 @@
     <%= partial 'shared/alert', locals: {type: 'warning', label: 'Warning', message: 'This website is under development.'} %>
   <% end %>
   <!-- Start: Navbar Right Links -->
-  <nav class="navbar navbar-expand-md bg-body py-3 bg-opacity-25">
+  <nav class="navbar navbar-expand-md bg-dark bg-opacity-75 py-3 slide-in-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center bs-light-text-emphasis" href="index.html">
         <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
@@ -76,8 +76,8 @@
   <%= yield %>
   <!-- End: Main -->
   <!-- Start: Footer Basic -->
-  <footer class="text-center">
-    <div class="container text-muted py-4 py-lg-5">
+  <footer class="text-center bg-dark bg-opacity-75 fade-in">
+    <div class="container text-muted py-2">
       <ul class="list-inline fs-2">
         <li class="list-inline-item me-4">
           <a role="button" href="https://www.youtube.com/@raydee99">

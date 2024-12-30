@@ -49,20 +49,41 @@ footer a {
   color: var(--bs-yellow)!important;
 }
 
-.background-image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 4s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* TODO fix */
+.slide-in-top {
+  display: none;
+  animation: slideInTop 1s forwards;
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 body {
-    color: var(--bs-white);
+  /* Gradient with background-image purple: */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #250c32), color-stop(75%, #250c32), to(#0c1f4c));
+  background-image: linear-gradient(#250c32 75%, #0c1f4c 100%);
+
+  color: var(--bs-white);
 }
 
 @media (min-width: 992px) {
