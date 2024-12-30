@@ -71,7 +71,7 @@ module.exports = defineConfig({
 
   /* Make sure your local dev server is down (so port 3000 is free) */
   webServer: {
-    command: 'npm run server',
+    command: 'npm run preview',
     url: 'http://127.0.0.1:3000',
     reuseExistingServer: false,
   },
