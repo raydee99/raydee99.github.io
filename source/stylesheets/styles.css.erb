@@ -51,7 +51,7 @@ footer a {
 
 .fade-in {
     opacity: 0;
-    animation: fadeIn 4s ease-in forwards;
+    animation: fadeIn 2s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -63,18 +63,18 @@ footer a {
     }
 }
 
-/* TODO fix */
-.slide-in-top {
-  display: none;
-  animation: slideInTop 1s forwards;
+.drop-in {
+  animation: dropInFromTop 2s ease;
 }
 
-@keyframes slideInTop {
-  from {
+@keyframes dropInFromTop {
+  0% {
     transform: translateY(-100%);
+    opacity: 0;
   }
-  to {
+  100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
