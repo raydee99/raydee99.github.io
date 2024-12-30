@@ -5,27 +5,35 @@ layout: layout
 ---
 <% content_for(:head) do %>
   <%= stylesheet_link_tag 'background_image_audioventure.css' %>
+
+  <%# TODO: move into audioventure css %>
+  <style>
+    :root {
+      --bs-body-bg-rgb: 142, 124, 195;
+      --bs-body-bg-opacity: 0.8;
+    }
+  </style>
 <% end %>
 
 <main>
   <div class="container py-4 py-xl-5">
     <div class="row mb-5">
-      <div class="col-md-8 col-xl-6 text-center mx-auto">
-        <h2>Audioventure</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="ratio ratio-21x9">
-          <%= image_tag 'placeholder.png' %>
-        </div>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-12">
-        <p class="lead w-lg-50 py-3 bg-lg-dark bg-opacity-75 rounded-bottom">
-          TODO
+      <div class="col-md-12 col-xl-10 text-center p-5 mx-auto bg-body bg-opacity-75 rounded">
+        <h2 class="my-3">The Audioventure</h2>
+
+        <p>The Audioventure is an interactive album where you, the listener, get to choose what to listen to.</p>
+
+        <p>
+          After 6 months in the making, The Audioventure launched in May of 2021. This is a massive collaboration between over 20 gamers and game developers including 18 composers, 2 mix engineers, 2 visual artists, a programmer, and Ray "Raydee99" Demers. Raydee99 organized the entire project as producer and project manager along with composing 8 different tracks that are featured throughout this interactive album.
         </p>
+
+        <p>
+          Click on the Robotar below to be transported to Raydee99's The Audioventure!
+        </p>
+
+        <a class="slide-in mb-4" href="https://the-audioventure.github.io/The-Audioventure/#/Home">
+          <%= image_tag 'robotar.png', class: "rounded mx-auto d-block" %>
+        </a>
       </div>
     </div>
   </div>
