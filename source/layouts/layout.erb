@@ -9,7 +9,9 @@
   <link rel="canonical" href="https://www.raydee99.com/">
   <meta property="og:url" content="https://www.raydee99.com/">
   <meta property="og:type" content="website">
-  <meta name="description" content="Meet Raydee99, a video game music composer and TTRPG creator! View his portfolio in music compositions, games, and podcasts.">
+  <meta name="description"
+        content="<%= current_page.data.fetch('description', 'Meet Raydee99, a video game music composer and TTRPG creator! View his portfolio in music compositions, games, and podcasts.') %>"
+        >
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -40,6 +42,7 @@
 </head>
 
 <body>
+  <div id="content-wrap">
   <noscript>
     <%= partial 'shared/alert', locals: {type: 'danger', label: 'Warning',  message: 'Javascript is disabled so site functionality is limited. Please enable Javascript.'} %>
   </noscript>
@@ -60,6 +63,7 @@
   <!-- Start: Main -->
   <%= yield %>
   <!-- End: Main -->
+  </div>
 
   <!-- Start: Footer Basic -->
   <% if content_for?(:footer) %>
