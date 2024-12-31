@@ -5,16 +5,19 @@
 <%# @param description [String] %>
 
 <div class="col">
-  <div class="d-flex justify-content-center">
-    <a href="<%= url %>" rel="external" target="_blank" title="Play <%= title %>">
-      <img class="rounded img-fluid d-block w-100 fit-contain"
-           style="height: 225px; max-width:292.5px;"
-           src="<%= image_path(image) %>"
-           alt="An image named <%= image %> for the game <%= title %>.">
-    </a>
-  </div>
-  <div class="text-center py-4">
-    <%= description %>
-  </div>
+  <a href="<%= url %>" rel="external" target="_blank" title="Play <%= title %>">
+    <div class="card h-100 bg-body bg-opacity-75" style="max-width: 292.5px;">
+      <img src="<%= image_path(image) %>"
+           class="card-img-top"
+           style="height:225px"
+           alt="An image named <%= image %> for the game <%= title %>."
+      />
+      <div class="card-body text-center">
+        <p class="card-text">
+          <%= description %>
+        </p>
+      </div>
+    </div>
+  </a>
 </div>
 
