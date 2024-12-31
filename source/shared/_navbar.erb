@@ -2,6 +2,7 @@
 <nav class="navbar navbar-expand-md bg-dark bg-opacity-75 py-3 drop-in">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center bs-light-text-emphasis" href="index.html">
+      <% if false # music note icon: %>
       <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note" viewBox="0 0 16 16">
           <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
@@ -9,6 +10,8 @@
           <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5z"/>
         </svg>
       </span>
+      <% end %>
+      <%= image_tag 'favicon-32x32.png', class: 'd-align-block me-2', alt: 'Rat-Ray Logo' %>
       <span class="bs-light-text-emphasis">Raydee99</span>
     </a>
     <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
