@@ -3,19 +3,28 @@
   --bs-yellow-rgb: 237, 210, 59;
   --bs-warning: var(--bs-yellow);
   --bs-warning-rgb: 237, 210, 59;
-  
+
   --bs-purple: #250C32;
   --bs-purple-rgb: 37, 12, 50;
   --bs-body-bg: var(--bs-purple);
   --bs-body-bg-rgb: var(--bs-purple-rgb);
+
+  --footer-height: 10rem;
 }
 
 body {
+  position: relative;
+  min-height: 100vh;
+
   /* Gradient with background-image purple: */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--bs-body-bg)), color-stop(75%, var(--bs-body-bg)), to(#0c1f4c));
   background-image: linear-gradient(var(--bs-body-bg) 75%, #0c1f4c 100%);
 
   color: var(--bs-white);
+}
+
+.bg-none {
+  background-color: rgba(0,0,0,0) !important;
 }
 
 .mobile-btn {
@@ -72,6 +81,17 @@ a {
   .bg-lg-dark {
     background-color: var(--bs-dark)!important;
   }
+}
+
+#content-wrap {
+  padding-bottom: var(--footer-height);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-height);
 }
 
 footer a {
