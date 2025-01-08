@@ -1,4 +1,7 @@
 require 'bundler'
+require_relative 'lib/raydee99'
+
+extend Raydee99::Util
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -32,35 +35,7 @@ page '/*.txt', layout: false
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
-
-helpers do
-  # @param games [Array<EnhancedHash>]
-  # @param type [#to_s] ttrpg | video_game | other
-  def select_games(games, type)
-    case type.to_s
-    when 'ttrpg'
-      games.select { |g| g['type']&.casecmp? 'ttrpg' }
-    when 'video_game'
-      games.select { |g| g['type']&.casecmp? 'video_game' }
-    when 'other'
-      games.reject { |g| %w[ttrpg video_game].include? g['type']&.downcase }
-    else
-      raise StandardError, "Invalid type #{type} param when calling select_games helper"
-    end
-  end
-
-  # @param font_file [String]
-  def font_path(font_file)
-    asset_path('fonts', font_file).delete_suffix('.fonts')
-  end
-end
-
-# @return [String] calder version number
-def version()
-  Time.now.strftime("%Y.%m.%d") + '-' + `git log --format="%H" -n 1`[0...3]
-rescue
-  Time.now.strftime("%Y.%m.%d")
-end
+helpers Raydee99::Helpers
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
