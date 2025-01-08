@@ -1,0 +1,8 @@
+# robots.txt
+# Adapted from GitHub's robot.txt
+User-agent: baidu
+crawl-delay: 1
+
+User-agent: *
+Disallow: /account-login
+Disallow: /Explodingstuff/

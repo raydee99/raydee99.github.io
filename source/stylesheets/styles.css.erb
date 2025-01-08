@@ -9,7 +9,7 @@
   --bs-body-bg: var(--bs-purple);
   --bs-body-bg-rgb: var(--bs-purple-rgb);
 
-  --footer-height: 10rem;
+  --footer-height: 15rem;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
 }
 @media (min-width: 992px) {
   .mobile-iframe-flex {
-    height: 400px;
+    height: 352px;
   }
 }
 
@@ -132,7 +132,9 @@ footer a {
 }
 
 .slide-in {
-  animation: slideInFromLeft 2s ease-in forwards;
+  position: relative;
+  z-index: 1;
+  animation: slideInFromLeft 1s ease-in forwards;
 }
 
 @keyframes slideInFromLeft {
@@ -147,4 +149,10 @@ footer a {
 
 }
 
+.no-animation {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
 

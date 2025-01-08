@@ -7,14 +7,6 @@ description: |
 ---
 <% content_for(:head) do %>
   <%= stylesheet_link_tag 'background_image_audioventure.css' %>
-
-  <%# TODO: move into audioventure css %>
-  <style>
-    :root {
-      --bs-body-bg-rgb: 142, 124, 195;
-      --bs-body-bg-opacity: 0.8;
-    }
-  </style>
 <% end %>
 
 <main>
@@ -33,9 +25,9 @@ description: |
           Click on the Robotar below to be transported to Raydee99's The Audioventure!
         </p>
 
-        <a class="slide-in mb-4" href="https://the-audioventure.github.io/The-Audioventure/#/Home">
-          <%= image_tag 'robotar.png', class: "rounded mx-auto d-block" %>
-        </a>
+          <a class="mb-4" href="https://the-audioventure.github.io/The-Audioventure/#/Home">
+            <%= image_tag 'robotar.png', class: "rounded mx-auto d-block slide-in" %>
+          </a>
       </div>
     </div>
   </div>
