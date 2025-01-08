@@ -37,9 +37,9 @@
         <% end %>
 
         <!-- Mobile view links: -->
-        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="<%= 'index.html.erb' == current_page.data.fetch('file') ? '#about' : 'about.html' %>">About</a></li>
         <li class="nav-item d-inline d-md-none"><a class="nav-link" href="audioventure.html">Audioventure!</a></li>
-        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item d-inline d-md-none"><a class="nav-link" href="<%= 'index.html.erb' == current_page.data.fetch('file') ? '#contact' : 'contact.html' %>">Contact</a></li>
       </ul>
 
       <!-- Desktop view buttons: -->
