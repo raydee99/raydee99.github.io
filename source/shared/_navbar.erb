@@ -12,7 +12,7 @@
       </span>
       <% end %>
       <%= image_tag 'favicon-32x32.png', class: 'd-align-block me-2', alt: 'Rat-Ray Logo' %>
-      <span class="bs-light-text-emphasis">Raydee99</span>
+      <span class="bs-light-text-emphasis" <% if 'index.html.erb' == current_page.data.fetch('file') %>style="color:var(--bs-yellow)!important;"<% end %> >Raydee99</span>
     </a>
     <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
       <span class="visually-hidden">Toggle navigation</span>
