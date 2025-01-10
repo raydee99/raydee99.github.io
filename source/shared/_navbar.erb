@@ -21,19 +21,19 @@
     <div class="collapse navbar-collapse" id="navcol-2">
       <ul class="navbar-nav ms-auto">
 
-        <% {'Games' => 'games.html', 'Music' => 'music.html', 'Podcasts' => 'podcasts.html'}.each do |name, page| %>
+        <% {'Music' => 'music.html', 'Games' => 'games.html', 'Podcasts' => 'podcasts.html'}.each do |name, page| %>
           <% if page == current_page.data.fetch('file')&.delete_suffix('.erb') %>
-            <li class="nav-item"><%= link_to name, page, class: 'nav-link nav-link-active' %></li>
+            <li class="nav-item mx-lg-5"><%= link_to name, page, class: 'nav-link nav-link-active' %></li>
           <% else %>
-            <li class="nav-item"><%= link_to name, page, class: 'nav-link' %></li>
+            <li class="nav-item mx-lg-5"><%= link_to name, page, class: 'nav-link' %></li>
           <% end %>
         <% end %>
 
         <!-- Desktop view links: -->
         <% if 'about.html.erb' == current_page.data.fetch('file') %>
-          <li class="nav-item d-none d-md-inline"><%= link_to 'About', 'about.html', class: 'nav-link nav-link-active' %></li>
+          <li class="nav-item mx-lg-5 d-none d-md-inline"><%= link_to 'About', 'about.html', class: 'nav-link nav-link-active' %></li>
         <% else %>
-          <li class="nav-item d-none d-md-inline"><%= link_to 'About', 'about.html', class: 'nav-link' %></li>
+          <li class="nav-item mx-lg-5 d-none d-md-inline"><%= link_to 'About', 'about.html', class: 'nav-link' %></li>
         <% end %>
 
         <!-- Mobile view links: -->
@@ -44,15 +44,15 @@
 
       <!-- Desktop view buttons: -->
       <% if 'audioventure.html.erb' == current_page.data.fetch('file') %>
-        <a class="nav-btn btn btn-outline-warning ms-md-2 d-none d-md-inline-block" role="button" href="audioventure.html">Audioventure!</a>
+        <a class="nav-btn mx-lg-5 btn btn-outline-warning ms-md-2 d-none d-md-inline-block" role="button" href="audioventure.html">Audioventure!</a>
       <% else %>
-        <a class="nav-btn btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="audioventure.html">Audioventure!</a>
+        <a class="nav-btn mx-lg-5 btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="audioventure.html">Audioventure!</a>
       <% end %>
 
       <% if 'contact.html.erb' == current_page.data.fetch('file') %>
-        <a class="nav-btn btn btn-outline-warning ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
+        <a class="nav-btn mx-lg-5 btn btn-outline-warning ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
       <% else %>
-        <a class="nav-btn btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
+        <a class="nav-btn mx-lg-5 btn btn-outline-primary ms-md-2 d-none d-md-inline-block" role="button" href="contact.html">Contact</a>
       <% end %>
 
     </div>
