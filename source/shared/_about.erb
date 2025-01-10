@@ -1,17 +1,20 @@
 <%# _about.erb %>
 <section id="about">
   <div class="container py-4 py-xl-5">
-    <div class="row gy-4 gy-md-0">
-      <div class="col-md-6">
-        <div class="p-xl-5 m-xl-5">
+    <div class="row mb-5 justify-content-center">
+      <img class="img-fluid w-100 w-sm-75 fit-cover mx-xl-5 mx-2" src="<%= image_path 'raydee99_banner.png' %>" alt="Raydee99's banner image" />
+    </div>
+    <div class="row gy-4 gy-md-0 justify-content-center">
+      <div class="col-auto">
+        <div class="text-center">
           <img class="rounded img-fluid w-100 fit-cover"
-               style="min-height: 300px;"
+               style="min-height: 300px; max-width: 500px;"
                src="<%= image_path File.join("data/images/", data['about'].find{ |obj| obj.has_key? 'image' }.fetch('image')) %>"
                alt="Profile picture of Ray Demers" />
         </div>
       </div>
-      <div class="col-md-6 d-md-flex align-items-md-center">
-        <div class="bg-body bg-opacity-75" style="max-width: 350px;">
+      <div class="col-auto d-md-flex align-items-md-center text-center">
+        <div class="p-xl-5 p-lg-4 p-1 bg-body" style="max-width:500px;">
           <h2 class="fw-bold">About Ray</h2>
           <% data['about'].each do |obj| %>
             <% if obj.has_key? 'paragraph' %>
