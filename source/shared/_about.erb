@@ -5,7 +5,7 @@
       <img class="img-fluid w-100 w-sm-75 fit-cover mx-xl-5 mx-2" src="<%= image_path 'raydee99_banner.png' %>" alt="Raydee99's banner image" />
     </div>
     <div class="row gy-4 gy-md-0 justify-content-center">
-      <div class="col-auto">
+      <div class="col-auto px-0">
         <div class="text-center">
           <img class="rounded img-fluid w-100 fit-cover"
                style="min-height: 300px; max-width: 500px;"
@@ -13,8 +13,8 @@
                alt="Profile picture of Ray Demers" />
         </div>
       </div>
-      <div class="col-auto d-md-flex align-items-md-center text-center">
-        <div class="p-xl-5 p-lg-4 p-1 bg-body" style="max-width:500px;">
+      <div class="col-auto d-md-flex align-items-md-center text-center bg-body px-0">
+        <div class="p-lg-4 p-2" style="max-width:500px;">
           <h2 class="fw-bold">About Ray</h2>
           <% data['about'].each do |obj| %>
             <% if obj.has_key? 'paragraph' %>
