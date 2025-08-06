@@ -17,20 +17,6 @@
 #     is case and whitespace sensitive.
 #
 
-- title: "Airrobbed"
-  spotify_embed_url: "https://embed.spotify.com/?uri=spotify%3Aepisode%3A2KL1CQgMNvMRE7ub9LfOJV&amp;color=black&amp;style=list"
-  description: |
-    Airrobbed is a hilarious, true-crime podcast that takes place in a college
-    setting where a handful of students' airpods have gone missing! It's up to
-    Aubrey Fisher to find out who's stolen them in Airrobbed. In this podcast
-    I took on the role of audio editor.
-- title: "Habit of Force"
-  spotify_embed_url: "https://embed.spotify.com/?uri=spotify%3Ashow%3A61OSpI0TjNSn20TLbmTIgf&color=black&style=list"
-  description: |
-    Habit of Force is a Lancer TTRPG actual play podcast about featuring a cast
-    of silly, mecha mercenaries. The podcast takes place in the world of Brandon
-    Sichling's upcoming Habit of Force video game. I took on the role of audio
-    editor for the first two episodes.
 - title: "SideQuest"
   spotify_embed_url: "https://embed.spotify.com/?uri=spotify%3Ashow%3A3L4e7eoVMK1dkyjyiHgN7v&color=black&style=list"
   description: |
@@ -38,6 +24,20 @@
     talk about a different game of their choice. We discuss everything video game
     related from music to game design to writing. On SideQuest, I took on the role
     of host, composer, and audio editor. Come check it out and quest with us!
+- title: "Habit of Force"
+  spotify_embed_url: "https://embed.spotify.com/?uri=spotify%3Ashow%3A61OSpI0TjNSn20TLbmTIgf&color=black&style=list"
+  description: |
+    Habit of Force is a Lancer TTRPG actual play podcast about featuring a cast
+    of silly, mecha mercenaries. The podcast takes place in the world of Brandon
+    Sichling's upcoming Habit of Force video game. I took on the role of audio
+    editor for the first two episodes.
+- title: "Airrobbed"
+  spotify_embed_url: "https://embed.spotify.com/?uri=spotify%3Aepisode%3A2KL1CQgMNvMRE7ub9LfOJV&amp;color=black&amp;style=list"
+  description: |
+    Airrobbed is a hilarious, true-crime podcast that takes place in a college
+    setting where a handful of students' airpods have gone missing! It's up to
+    Aubrey Fisher to find out who's stolen them in Airrobbed. In this podcast
+    I took on the role of audio editor.
 - title: "Squeeeee!!!"
   spotify_embed_url: "https://open.spotify.com/embed/show/6nl7lh1LMl4NmGxlM3upZM"
   description: |
