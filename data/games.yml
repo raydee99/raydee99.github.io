@@ -19,48 +19,18 @@
 #     is case and whitespace sensitive.
 #
 
-- title: "Ah!! My Roommate is a Succubus Hellbent on World Conquest!!"
-  url: "https://watercress.itch.io/ah-my-roommate-is-a-succubus-hellbent-on-world-conquest"
-  image: "ah_my_roommate_is_a_succubus_hellbent_on_world_conquest.png"
-  type: video_game
-  description: |
-    Composer
 - title: "New Year, New Beat!"
   url: "https://codejunkiestudios.itch.io/new-year-new-beat"
   image: "new_year_new_beat.png"
   type: video_game
   description: |
     Composer, Beat-Mapper, & Lead Game Designer
-- title: "Dash & Cast"
-  url: "https://codejunkiestudios.itch.io/dash-and-cast"
-  image: "dash_and_cast.png"
-  type: video_game
-  description: |
-    Composer, Level Designer, & Lead Game Designer
 - title: "Pillow Tetris"
   url: "https://codejunkiestudios.itch.io/pillow-tetris"
   image: "pillow_tetris.png"
   type: video_game
   description: |
     Composer & Lead Game Designer
-- title: "The Adventures of Soap Boy"
-  url: "https://codejunkiestudios.itch.io/the-adventures-of-soap-boy"
-  image: "adventures_of_soap_boy.png"
-  type: video_game
-  description: |
-    Composer
-- title: "Queen of Swords"
-  url: "https://codejunkiestudios.itch.io/queen-of-swords"
-  image: "queen_of_swords.png"
-  type: video_game
-  description: |
-    Composer, Game Designer, & Producer
-- title: "Dough Mentum"
-  url: "https://ahrtxv.itch.io/dough-mentum"
-  image: "doughmentum.png"
-  type: video_game
-  description: |
-    Composer
 - title: "Three's a Crowd"
   url: "https://warspiteful.itch.io/threes-a-crowd"
   image: "threes_a_crowd.png"
@@ -72,7 +42,7 @@
   image: "wander.png"
   type: video_game
   description: |
-    Composer, level Designer, & Sound Designer
+    Composer, Level Designer, & Sound Designer
 - title: "Blooming Hearts"
   url: "https://warspiteful.itch.io/blooming-hearts"
   image: "blooming_hearts.png"
@@ -91,12 +61,6 @@
   type: video_game
   description: |
     Composer
-- title: "Tiny Kaiju Terrarium"
-  url: "https://2ecat.itch.io/tiny-kaiju-terrarium"
-  image: "tiny_kaiju_terrarium.png"
-  type: video_game
-  description: |
-    Composer, Producer, & Sound Designer
 - title: "Hearts of Hallow's Eve"
   url: "https://warspiteful.itch.io/hearts-of-hallows-eve"
   image: "hearts_of_hallows_eve.png"
@@ -109,13 +73,14 @@
   type: video_game
   description: |
     Composer, Producer, & Additional Writing
+
 - title: "Mission Opossumble"
   url: "https://raydee99.itch.io/mission-opossumble"
   image: "mission_opossumble.png"
   type: ttrpg
   description: |
     Sole Game Designer
-- title: "K-RAT-E"
+- title: "KA•RAT•E"
   url: "https://raydee99.itch.io/ka-rat-e"
   image: "ka_rat_e.png"
   type: ttrpg
